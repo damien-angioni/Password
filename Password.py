@@ -38,11 +38,11 @@ def main():
             else:
                 print("Veuillez insérer au moins un caracrtère spécial dans votre mot de passe.")
                 process=True
-        Mashword=hashlib.sha256(Password.encode()).hexdigest()
-        print("Mot de passe après Hashing:",Mashword)
-        JSON_pw = {"Password":Mashword}
-        file=open("Passwords.json", "a")
-        json.dump(JSON_pw,file)
-        print("pret à rentrer un nouveau mot de passe!")
-        process=True
+    Mashword=hashlib.sha256(Password.encode()).hexdigest()
+    print("Mot de passe après Hashing:",Mashword)
+    JSON_pw = {"Password":Mashword}
+    file=open("Passwords.json", "a")
+    json.dump(JSON_pw,file)
+    print("pret à rentrer un nouveau mot de passe!")
+    process=True
 main()  
